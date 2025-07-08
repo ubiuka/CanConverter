@@ -5,6 +5,7 @@ string filePath = Path.Combine("D:", "AmIWorkingOrNot", "CanConverter", "new tes
 string filePath2 = Path.Combine("D:", "AmIWorkingOrNot", "CanConverter", "sort1.txt");
 string filePath3 = Path.Combine("D:", "AmIWorkingOrNot", "CanConverter", "sort2.txt");
 string filePath4 = Path.Combine("D:", "AmIWorkingOrNot", "CanConverter", "result.txt");
+string filePath5 = Path.Combine("D:", "AmIWorkingOrNot", "CanConverter", "tester.txt");
 SortOut.SortedTime(filePath, filePath2);
 SortOut.SortedSkip(filePath2, filePath3);
 Dictionary<string, Dictionary<string, string>> work = new ReqResDictionary().Jesus(filePath3);
