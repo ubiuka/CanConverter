@@ -8,7 +8,8 @@ string filePath4 = Path.Combine("D:", "AmIWorkingOrNot", "CanConverter", "result
 string filePath5 = Path.Combine("D:", "AmIWorkingOrNot", "CanConverter", "tester.txt");
 SortOut.SortedTime(filePath, filePath2);
 SortOut.SortedSkip(filePath2, filePath3);
-Dictionary<string, Dictionary<string, string>> work = new ReqResDictionary().Jesus(filePath3);
+Dictionary <string, Dictionary<string, string>> work = new IdSearch().EnterId(filePath3);
+
 var output = new StringBuilder();
 foreach (var outer in work)
 {
@@ -17,7 +18,7 @@ foreach (var outer in work)
     {
         output.AppendLine($"  {inner.Key}: {inner.Value}");
     }
-    output.AppendLine(); // Empty line between entries
+    output.AppendLine(); 
 }
 File.WriteAllText(filePath4, output.ToString());
 

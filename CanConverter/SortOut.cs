@@ -5,14 +5,17 @@ public class SortOut
 {
     public static void SortedTime(string filePath, string filePath2)
     {
-        var lines = File.ReadAllLines(filePath)
-            .Select(line => line.Length > 16 ? line[16..] : line)
-            .ToArray();
+        string[] lines = File.ReadAllLines(filePath)
+            .Select(line => line.Length > 21 ? line[21..] : line)
+            .Select(line => line.Replace(" DLC = 8 DATA =", "")).ToArray();
+        
         File.WriteAllLines(filePath2, lines);
     }
 
     public static void SortedSkip(string filePath2, string filePath3)
     {
+        
+        
         string digitSequence = "3E 00";
         string digitSequence2 = "7E 00"; 
         string digitSequence3 = "78";
